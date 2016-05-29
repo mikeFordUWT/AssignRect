@@ -34,8 +34,8 @@ Circle.prototype.collideRecSide = function (other) {
     var circleBox = {x: this.x - this.radius, y: this.y - this.radius, width: this.radius*2, height:this.radius*2 };
     var otherBox = {x: otherx, y: other.y, width: other.width, height: other.height};
     //TODO bounce ball off side of rects
-    var rightSide = circleBox.x + circleBox.width === otherBox.x && circleBox.y
-
+    var rightSide = circleBox.x + circleBox.width === otherBox.x && circleBox.y;
+    var leftSide = circleBox.x === otherBox.x + otherBox.width;
     // if(this.x){
     //
     // }
