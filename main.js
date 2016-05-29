@@ -50,10 +50,11 @@ ASSET_MANAGER.downloadAll(function () {
 
 
 
-    var rect = new Rectangle(gameEngine, 0, 100, 400, 50);
-    var rect2 = new Rectangle(gameEngine,0, 300, 550, 50);
-    var rect3 = new Rectangle(gameEngine,200, 500, 400, 50);
+    var rect = new Rectangle(gameEngine, 0, 100, 300, 50);
+    var rect2 = new Rectangle(gameEngine,200, 300, 400, 50);
+    var rect3 = new Rectangle(gameEngine,500, 500, 400, 50);
     var rect4 = new Rectangle(gameEngine, 500, 100, 400, 50);
+    var rect5 = new Rectangle(gameEngine, 0, 500, 300, 50);
     var leader = new Circle(gameEngine, true);
     leader.color = "white";
 
@@ -69,6 +70,7 @@ ASSET_MANAGER.downloadAll(function () {
     gameEngine.addEntity(rect3);
     gameEngine.addEntity(rect2);
     gameEngine.addEntity(rect4);
+    gameEngine.addEntity(rect5);
 
 
 
