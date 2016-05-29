@@ -56,7 +56,7 @@ ASSET_MANAGER.downloadAll(function () {
     var rect4 = new Rectangle(gameEngine, 500, 100, 400, 50);
     var rect5 = new Rectangle(gameEngine, 0, 500, 300, 50);
     var leader = new Circle(gameEngine, true);
-    leader.color = "white";
+
 
 
     for(var i = 0; i < 2; i++){
