@@ -47,6 +47,9 @@ ASSET_MANAGER.downloadAll(function () {
     var gameEngine = new GameEngine();
     var bg = new Background(gameEngine);
     gameEngine.addEntity(bg);
+
+
+
     var rect = new Rectangle(gameEngine, 0, 100, 400, 50);
     var rect2 = new Rectangle(gameEngine,0, 300, 550, 50);
     var rect3 = new Rectangle(gameEngine,200, 500, 400, 50);
@@ -57,6 +60,7 @@ ASSET_MANAGER.downloadAll(function () {
 
     for(var i = 0; i < 2; i++){
         var circle = new Circle(gameEngine);
+
         gameEngine.addEntity(circle, false);
     }
     gameEngine.addEntity(leader);
