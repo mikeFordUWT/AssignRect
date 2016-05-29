@@ -79,10 +79,11 @@ Circle.prototype.draw = function (ctx) {
     ctx.fillStyle = this.color;
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2, false);
     ctx.fill();
+    ctx.stroke();
     ctx.closePath();
     var circleBox = {x:this.x - this.radius, y:this.y - this.radius,width:this.radius * 2, height:this.radius * 2}
     ctx.rect(circleBox.x,circleBox.y, circleBox.width, circleBox.height);
-    ctx.stroke();
+    // ctx.stroke();
     Entity.prototype.draw.call(this);
 };
 
@@ -123,12 +124,12 @@ Circle.prototype.update = function () {
 
     }
 
-    for(var i = 0; i< this.game.entities.length; i++){
-        var ent = this.game.entities[i];
-        if(ent.leader && this !=ent && ent instanceof Circle){
-            this.seek(ent);
-        }
-    }
+    // for(var i = 0; i< this.game.entities.length; i++){
+    //     var ent = this.game.entities[i];
+    //     if(ent.leader && this !=ent && ent instanceof Circle){
+    //         this.seek(ent);
+    //     }
+    // }
 
     if(this.collideRight()||this.collideLeft()){
         // console.log("RIGHT OR LEFT");
