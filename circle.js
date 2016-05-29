@@ -1,6 +1,6 @@
-function Circle(game, leader){
+function Circle(game){
 
-    this.leader = leader;
+    
 
 
     this.radius = 30;
