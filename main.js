@@ -77,7 +77,27 @@ ASSET_MANAGER.downloadAll(function () {
 
 
 
+    var ents = gameEngine.entities;
+    var states = [];
+    for(var i =0; i< ents.length; i++){
+        var ent = ents[i];
+        if(ents[i] instanceof Circle){
+            var state = {type: "circle",x: ent.x, y: ent.y, color: ent.color};
+            states.push(state);
+            console.log(states);
 
+            console.log("STATE:");
+            console.log(state);
+        }
+        if(ents[i] instanceof Rectangle){
+            var state  = {type: "rectangle",x:ent.x, y: ent.y, width: ent.width, height: ent.height, color: ent.color};
+            console.log("STATE:");
+            console.log(state);
+            states.push(state);
+            console.log(states);
+        }
+
+    }
 
     gameEngine.init(ctx);
     gameEngine.start();
